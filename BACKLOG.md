@@ -77,8 +77,13 @@ heavily. Several say outright "not claimed as new".
 
 ### The abstract template
 
-An LLM extracted the accepted profile into a drafting prompt with eight
-sections: what is proved (matching the compared statement exactly) · conditionality
+The move that produced all of the above was Carlo's: stop reading the policy
+documents and look at what actually passed. Three feasibility rounds reasoned
+from the rules and two refusals, and never once fetched the list of registered
+entries — which was public the whole time. An LLM ran the query; the hypothesis
+was his.
+
+The accepted profile, extracted into a drafting prompt with eight sections: what is proved (matching the compared statement exactly) · conditionality
 (N fully stated propositions, hypotheses not axioms, each source named) · what is
 NOT proved (a dedicated paragraph, enumerated) · audience (named papers and
 researchers, not a category) · novelty as a dated *procedure*, never a claim ·
