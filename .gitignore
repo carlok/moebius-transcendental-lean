@@ -22,6 +22,8 @@ blueprint/web/
 
 # private working notes, never committed
 private/
+# working backlog: contains local paths and private review analysis
+BACKLOG.md
 
 # tooling scratch
 .codegraph/

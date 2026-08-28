@@ -20,14 +20,14 @@ where it is machine-checked and verified by two independent kernels.
 
 Early. Five declarations proved and `sorry`-free; two definitions with no
 results yet attached. [`tex/ground-up.tex`](tex/ground-up.tex) states every
-result with its status — proved, stated only, or out of reach — and
-[`BACKLOG.md`](BACKLOG.md) has the increments.
+result with its status — proved, stated only, or out of reach. Nothing not so
+marked is claimed.
 
 This is a **blueprint-style** formalization. Results are either proved
-outright, or — once increment 3 lands — proved *conditionally* on results cited
-from the literature and collected in a single `Axioms.lean`. Nothing is left as
-`sorry`; anything not yet formalized is stated in `tex/ground-up.tex` and marked
-as such rather than stubbed in Lean.
+outright, or proved *conditionally* on results cited from the literature, which
+will be collected in a single `Axioms.lean` as they are needed. Nothing is left
+as `sorry`: anything not yet formalized is stated in `tex/ground-up.tex` and
+marked as such rather than stubbed in Lean.
 
 Two consequences of that design, stated plainly:
 
@@ -46,8 +46,14 @@ lake exe cache get
 lake build
 ```
 
-Pinned to `leanprover/lean4:v4.32.0` with Mathlib at the same tag. The pin is
-deliberate and documented in `BACKLOG.md`.
+Pinned to `leanprover/lean4:v4.32.0` with Mathlib at the same tag, rev
+`81a5d257c8e410db227a6665ed08f64fea08e997`.
+
+The pin is deliberate rather than incidental. `lean4export`, which proof-export
+tooling depends on, tracks only some Lean releases: its toolchain history goes
+`v4.32.0` straight to `v4.33.0-rc1`, with no `v4.32.1` or `v4.32.2`. Since Lean
+refuses oleans built by a different toolchain, a project on an untracked patch
+release cannot be exported at all. `v4.32.0` is chosen for that reason.
 
 ## What formalization has already found
 
