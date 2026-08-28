@@ -18,7 +18,7 @@ Source paper: `~/Documents/varie/hacks/t/transcendental/p19.tex`
 | Cited literature | one documented `Axioms.lean`, as in `diaz-modulus-lean`. **Not** `sorry` (proves nothing) and **not** threaded hypotheses (unreadable at this scale). |
 | Style | Mathlib conventions throughout — copyright header, module docstring, docstring per declaration, `#lint`-clean. Keeps small upstream PRs possible at PR cost, not rewrite cost. |
 | Palomar | **REVISED 2026-08-28 — see "Correction" below.** Still a view, not a driver. But the gate is *positioning*, not novelty, and conditional-on-cited-literature entries are registered routinely. |
-| Remote | not created. Local only until you decide. |
+| Remote | `carlok/moebius-transcendental-lean`, **private**. Make it public when the blueprint has something to show. |
 
 ---
 
