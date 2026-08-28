@@ -17,7 +17,7 @@ Source paper: `~/Documents/varie/hacks/t/transcendental/p19.tex`
 | `δ` typing | `ℕ∞` via `minpoly … natDegree`, **not** `Module.finrank`. Dodges `IntermediateField` tower instances; `⊤` is a real value, not `finrank`'s junk `0`. Settled and compiled. |
 | Cited literature | one documented `Axioms.lean`, as in `diaz-modulus-lean`. **Not** `sorry` (proves nothing) and **not** threaded hypotheses (unreadable at this scale). |
 | Style | Mathlib conventions throughout — copyright header, module docstring, docstring per declaration, `#lint`-clean. Keeps small upstream PRs possible at PR cost, not rewrite cost. |
-| Palomar | a **view**, never the goal. Three rounds proved that optimising for it narrows the mathematics to the elementary parts, which is what got refused. Formalize the paper; let a Challenge take whatever falls out axiom-clean. |
+| Palomar | **REVISED 2026-08-28 — see "Correction" below.** Still a view, not a driver. But the gate is *positioning*, not novelty, and conditional-on-cited-literature entries are registered routinely. |
 | Remote | not created. Local only until you decide. |
 
 ---
@@ -29,6 +29,63 @@ Lakefile, toolchain, manifest, LICENSE (Apache-2.0), `.gitignore`,
 and round-3 studies before being ported here.
 
 **DoD:** `lake build` green.
+
+---
+
+## Correction — the Palomar model was wrong
+
+Read `https://data.palomar-registry.org/recent.json`. The 37 registered entries
+say something the policy documents do not.
+
+**Pure formalization of classical theorems is registrable.** Descartes's Rule of
+Signs (1637), Hall's Marriage Theorem (1935), Erdős–Ko–Rado, Sylvester–Gallai,
+Bollobás, Bondy, Graham–Pollak — all registered, several described as
+"formalization only". The gate is not novelty.
+
+**Conditional entries are registered routinely.** `Vulkin-prog/paper-c-lean` is
+conditional on "exactly six fully stated ordinary source propositions" —
+registered twice. `AviKndr/universal-words` keeps its main theorem on the three
+standard axioms with the axiom-assuming version in "a quarantined module" that
+is not compared. `teal-sea/zeta-lab` leaves its eight-point instance conditional
+and discloses a step "checked numerically only".
+
+That quarantine architecture is exactly the `Axioms.lean` plan in increment 3.
+It is not a workaround; it is the registered norm.
+
+**Why the two 2026-08-27/28 refusals happened.** Both claimed *original results*
+about *self-defined objects* — `OffsetAdmissible`, the conjugation rigidity.
+Registered entries are formalizations of *named* theorems, refutations of
+*named* conjectures, or solutions to *named* problems, and they under-claim
+heavily. Several say outright "not claimed as new".
+
+### Consequences for this backlog
+
+1. **Increment 4 is no longer blocked.** `thm:circular-degree` conditional on
+   Bézout, normalization and morphism degree — each a fully stated hypothesis —
+   follows the Vulkin-prog pattern directly. Round 2's NO-GO rested on the false
+   premise that conditionality disqualifies.
+2. **The ground-up TeX matters more than expected.** Registered abstracts devote
+   a large fraction of their length to what is *not* proved. `ground_up_2.tex`
+   is already in that register; p19 needs the same treatment.
+3. **`diaz-modulus-lean` may be registrable unchanged**, repositioned as a
+   formalization of the rigidity underlying Diaz's 2004 question rather than as
+   a new obstruction. Same Lean, different framing. Worth revisiting before
+   building anything new.
+4. **`parsimagma` too.** `BrandonMYates` has several registered *refutations* of
+   named conjectures, explicitly "not claimed as new". The ETP counterexamples
+   have that shape.
+
+### The abstract template
+
+An LLM extracted the accepted profile into a drafting prompt with eight
+sections: what is proved (matching the compared statement exactly) · conditionality
+(N fully stated propositions, hypotheses not axioms, each source named) · what is
+NOT proved (a dedicated paragraph, enumerated) · audience (named papers and
+researchers, not a category) · novelty as a dated *procedure*, never a claim ·
+contribution recorded as the formalization itself · axiom hygiene with
+`#print axioms` output pasted · automation with every model named.
+
+Keep that prompt. It is the most useful artefact produced this week.
 
 ---
 
