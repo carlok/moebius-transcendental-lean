@@ -1,5 +1,7 @@
 # moebius-transcendental-lean
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22146649.svg)](https://doi.org/10.5281/zenodo.22146649)
+
 A Lean 4 + Mathlib formalization of the conjugation degree on the transcendental
 locus, following the companion paper `p19.tex`.
 
@@ -62,6 +64,14 @@ transcription error in its printed formula — the map did not fix its own zero
 locus. The slip was confirmed by counterexample, symbolically, numerically and
 then formally, and the paper was corrected. The corrected reflection is proved
 in [`carlok/inversive-geometry-lean`](https://github.com/carlok/inversive-geometry-lean).
+
+## Citing
+
+Archived on Zenodo. Cite the **concept DOI**
+[10.5281/zenodo.22146649](https://doi.org/10.5281/zenodo.22146649), which always
+resolves to the most recent release. To pin a specific snapshot, use that
+release's own DOI instead — `v0.1.1` is
+[10.5281/zenodo.22146650](https://doi.org/10.5281/zenodo.22146650).
 
 ## Licence
 

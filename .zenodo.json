@@ -32,6 +32,11 @@
       "identifier": "https://github.com/carlok/moebius-transcendental-lean",
       "relation": "isSupplementTo",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.22146649",
+      "relation": "isVersionOf",
+      "scheme": "doi"
     }
   ]
 }
