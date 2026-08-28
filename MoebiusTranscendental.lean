@@ -1,2 +1,3 @@
 import MoebiusTranscendental.Multiplicity
 import MoebiusTranscendental.Basic
+import MoebiusTranscendental.Verify

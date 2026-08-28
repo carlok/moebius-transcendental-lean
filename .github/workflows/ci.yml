@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and check axioms
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          build: true
+      - name: Reject any sorry outside a deliberate placeholder
+        run: |
+          if grep -rn --include='*.lean' '\bsorry\b' MoebiusTranscendental/ MoebiusTranscendental.lean; then
+            echo "::error::sorry found; this repository states unproved results in tex/ground-up.tex, not as Lean stubs"
+            exit 1
+          fi
+          echo "no sorry in the Lean sources"
