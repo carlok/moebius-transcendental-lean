@@ -3,12 +3,15 @@
 *.olean
 *.ilean
 
-# TeX auxiliary output (the PDF is tracked)
+# TeX build output, including the PDF — the .tex is the source of truth
+tex/*.pdf
 tex/*.aux
 tex/*.log
 tex/*.out
 tex/*.toc
 tex/*.synctex.gz
+tex/*.fls
+tex/*.fdb_latexmk
 
 # blueprint build output, once increment 1 lands
 blueprint/print/
