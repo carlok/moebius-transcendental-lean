@@ -3,13 +3,16 @@
 *.olean
 *.ilean
 
-# blueprint build output
+# TeX auxiliary output (the PDF is tracked)
+tex/*.aux
+tex/*.log
+tex/*.out
+tex/*.toc
+tex/*.synctex.gz
+
+# blueprint build output, once increment 1 lands
 blueprint/print/
 blueprint/web/
-blueprint/src/*.aux
-blueprint/src/*.log
-blueprint/src/*.out
-blueprint/src/*.pdf
 
 # Palomar Comparator tool cache
 .cache/

@@ -18,13 +18,16 @@ where it is machine-checked and verified by two independent kernels.
 
 ## Status
 
-Early. See [`BACKLOG.md`](BACKLOG.md) for what is done, what is next, and what
-is deliberately deferred.
+Early. Five declarations proved and `sorry`-free; two definitions with no
+results yet attached. [`tex/ground-up.tex`](tex/ground-up.tex) states every
+result with its status — proved, stated only, or out of reach — and
+[`BACKLOG.md`](BACKLOG.md) has the increments.
 
-This is a **blueprint-style** formalization: some results are proved outright,
-others are proved *conditionally* on results cited from the literature and
-collected in a single `Axioms.lean`. The blueprint dependency graph shows which
-is which. Nothing is left as `sorry`.
+This is a **blueprint-style** formalization. Results are either proved
+outright, or — once increment 3 lands — proved *conditionally* on results cited
+from the literature and collected in a single `Axioms.lean`. Nothing is left as
+`sorry`; anything not yet formalized is stated in `tex/ground-up.tex` and marked
+as such rather than stubbed in Lean.
 
 Two consequences of that design, stated plainly:
 
@@ -48,10 +51,11 @@ deliberate and documented in `BACKLOG.md`.
 
 ## What formalization has already found
 
-Formalizing `lem:R_H` turned up a transcription error in the printed reflection
-formula — it did not fix its own zero locus. The slip was confirmed by
-counterexample, symbolically, numerically, and then formally, and the paper was
-corrected. See `NOTE_discrepancy.md` in the `p19-lean/DiazSample1` sample.
+Formalizing the reflection lemma of the companion paper turned up a
+transcription error in its printed formula — the map did not fix its own zero
+locus. The slip was confirmed by counterexample, symbolically, numerically and
+then formally, and the paper was corrected. The corrected reflection is proved
+in [`carlok/inversive-geometry-lean`](https://github.com/carlok/inversive-geometry-lean).
 
 ## Licence
 

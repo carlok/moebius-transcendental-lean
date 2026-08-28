@@ -245,6 +245,10 @@ Traps, all paid for already:
 
 ## Reference material
 
+**These paths are in the author's local working tree, not in this repository.**
+They are listed so the working context is recoverable; a reader of the repo
+alone will not find them.
+
 | Path | What |
 |---|---|
 | `t/transcendental/p19.tex` | the source paper |
