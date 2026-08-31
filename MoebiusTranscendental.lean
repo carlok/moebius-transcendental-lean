@@ -1,3 +1,4 @@
 import MoebiusTranscendental.Multiplicity
 import MoebiusTranscendental.Basic
+import MoebiusTranscendental.Spectrum
 import MoebiusTranscendental.Verify

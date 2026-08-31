@@ -5,6 +5,7 @@ Authors: Carlo Perassi
 -/
 import MoebiusTranscendental.Basic
 import MoebiusTranscendental.Multiplicity
+import MoebiusTranscendental.Spectrum
 
 /-!
 # Axiom verification
@@ -30,5 +31,14 @@ namespace MoebiusTranscendental
 #print axioms mult
 #print axioms nonempty_of_ne_zero
 #print axioms shiftTo_ne_zero
+
+-- Spectrum
+#print axioms conjDegree_ne_zero
+#print axioms finiteWitness_degree
+#print axioms finite_spectrum
+#print axioms top_witness_exists
+#print axioms spectrum_statement_compiles
+#print axioms stratum_nonempty
+#print axioms stratum_zero
 
 end MoebiusTranscendental

@@ -20,8 +20,16 @@ where it is machine-checked and verified by two independent kernels.
 
 ## Status
 
-Early. Five declarations proved and `sorry`-free; two definitions with no
-results yet attached. [`tex/ground-up.tex`](tex/ground-up.tex) states every
+Early. Fifteen declarations proved and `sorry`-free.
+
+The conjugation-degree spectrum is now completely classified: `δ` attains every
+value in `ℕ∞` except `0`, which it never attains
+([`Spectrum.lean`](MoebiusTranscendental/Spectrum.lean)). The finite values have
+the uniform explicit witness `zₙ = sⁿ + i·s` with `s = liouvilleNumber 2`; the
+`⊤` stratum is nonconstructive. That is the first result attached to `stratum`,
+and it is the only one that closes rather than opens a question — the finite
+half is an elementary transport of `RatFunc.finrank_eq_max_natDegree` and is not
+claimed as new. [`tex/ground-up.tex`](tex/ground-up.tex) states every
 result with its status — proved, stated only, or out of reach. Nothing not so
 marked is claimed.
 
